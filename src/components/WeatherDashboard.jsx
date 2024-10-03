@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { getWeatherData } from "../weatherApi";
-import { Container, Card } from "react-bootstrap";
+import React, { useEffect, useState } from 'react';
+import { getWeatherData } from '../api/WeatherApi';
+import { Container, Card } from 'react-bootstrap';
 
 const WeatherDashboard = () => {
   const [weather, setWeather] = useState(null);
@@ -26,16 +26,8 @@ const WeatherDashboard = () => {
           <Card.Body>
             <h3>Current Weather</h3>
             <p>Temperature: {weather.hourly.temperature_2m[0]}°C</p>
-            <p>
-              Rain Probability: {weather.hourly.precipitation_probability[0]}%
-            </p>
-            <p>
-              Recommendation:{" "}
-              {getClothingRecommendation(
-                weather.hourly.temperature_2m[0],
-                weather.hourly.precipitation_probability[0]
-              )}
-            </p>
+            <p>Rain Probability: {weather.hourly.precipitation_probability[0]}%</p>
+            <p>Recommendation: {getClothingRecommendation(weather.hourly.temperature_2m[0], weather.hourly.precipitation_probability[0])}</p>
           </Card.Body>
         </Card>
       ) : (
