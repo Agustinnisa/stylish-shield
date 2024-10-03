@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import WeatherDashboard from "./components/WeatherDashboard";
 import WeatherDetail from "./components/WeatherDetail";
-import WeeklyForecast from "./components/Forecast";
+import WeeklyForecast from "./components/WeeklyForecast";
 import OutfitRecommendation from "./components/OutfitRecommendation";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
